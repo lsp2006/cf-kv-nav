@@ -4,9 +4,9 @@
 >
 > 技术栈：**Hono + TypeScript + Cloudflare KV + Tailwind + DaisyUI + HTMX + SortableJS**
 
-> 📜 **本项目基于老王 ([eooce](https://github.com/eooce)) 的 [NAV 项目](https://github.com/llodys/node-nav) 修改重写而来**
+> 📜 **本项目基于老王 ([eooce](https://github.com/eooce)) 修改重写而来**
 >
-> v2 已彻底重构：移除 Argo 隧道、哪吒探针、订阅等 VPS 代码，**专注书签导航 + 后台管理**，完全 serverless。
+> v2 已彻底重构：**专注书签导航 + 后台管理**，完全 serverless。
 
 ---
 
