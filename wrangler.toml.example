@@ -1,0 +1,30 @@
+# Cloudflare Workers 配置模板
+# ⚠️ 复制为 wrangler.toml 后填入你自己的 account_id 和 KV ID
+
+name = "cf-kv-nav"
+main = "src/index.ts"
+compatibility_date = "2025-01-01"
+compatibility_flags = ["nodejs_compat"]
+
+# 你的 Cloudflare Account ID（运行 `wrangler whoami` 查看）
+# 也可以删掉本行，让 wrangler 在部署时自动用当前登录账号
+account_id = "REPLACE_WITH_YOUR_ACCOUNT_ID"
+
+# 静态资源绑定（public 目录会被托管到 / 路径）
+[assets]
+directory = "./public"
+binding = "ASSETS"
+
+# 环境变量
+# ⚠️ 生产环境密码请用 `wrangler secret put ADMIN_PASSWORD` 单独设置
+[vars]
+ADMIN_PASSWORD = "admin"
+
+# KV 命名空间绑定
+# 部署前请运行以下两条命令各创建一个，并把返回的 id 分别填到下面：
+#   wrangler kv namespace create NODE_NAV_KV
+#   wrangler kv namespace create NODE_NAV_KV --preview
+[[kv_namespaces]]
+binding = "NODE_NAV_KV"
+id = "REPLACE_WITH_YOUR_KV_ID"
+preview_id = "REPLACE_WITH_YOUR_PREVIEW_KV_ID"

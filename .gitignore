@@ -1,0 +1,16 @@
+node_modules/
+.wrangler/
+.dev.vars
+.env
+.env.local
+dist/
+*.log
+.DS_Store
+
+# Claude Code 本地会话
+.claude/
+CLAUDE.md
+
+# 含个人 Cloudflare 账号 ID + KV ID 的真实配置
+# 部署时从 wrangler.toml.example 复制并填入自己的 ID
+wrangler.toml
